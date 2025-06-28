@@ -1,0 +1,25 @@
+# Definimos todos los servicios
+services:
+  dispatcher:
+    build: ./http_dispatcher  
+    ports:
+      - "8080:8080"
+    environment:
+      - WORKER_ADDRESSES=http://worker1:7878,http://worker2:7878,http://worker3:7878,http://worker4:7878
+    depends_on:
+      - worker1
+      - worker2
+      - worker3
+      - worker4
+  
+  worker1:
+    build: ./SO_Server_Rust
+
+  worker2:
+    build: ./SO_Server_Rust
+
+  worker3:
+    build: ./SO_Server_Rust
+
+  worker4:
+    build: ./SO_Server_Rust

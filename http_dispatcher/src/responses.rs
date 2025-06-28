@@ -8,16 +8,6 @@ pub fn http_response_200(body : &str) -> String {
     )
 }
 
-// Lògica de respuesta de errores
-pub fn http_resonse_404(msg: &str) -> String {
-    let json = format!("{{\"status\" : 404, \"error\" : \"{}\"}}", msg);
-    format!(
-        "HTTP/1.0 404 Not Found\r\nContent-Length: {}\r\nContent-Type: text/plain\r\n\r\n{}",
-        json.len(),
-        json
-    )
-}
-
 pub fn http_resonse_400(msg: &str) -> String {
     let json = format!("{{\"status\" : 400, \"error\" : \"{}\"}}", msg);
     format!(

@@ -5,7 +5,7 @@ use crate::{endpoints::{calculate_monte_carlo, create_file, delete_file, fibonac
 /*
     Funcion encargada de gestionar la conexion
 */
-pub fn handle_connection(mut stream: TcpStream, start_time: Instant) {
+pub fn handle_connection(mut stream: TcpStream) {
     let mut buffer = [0u8; 1024];
     let read_bytes = stream.read(&mut buffer).unwrap_or(0);
 

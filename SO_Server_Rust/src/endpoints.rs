@@ -69,10 +69,6 @@ pub fn delete_file (name: &str) -> Result<String, String> {
 pub fn rerverse_text(input: &str) -> String{
     input.chars().rev().collect()
 }
-// /toupper?text=abc
-pub fn to_uppercase(input: &str) -> String {
-    input.to_uppercase()
-}
 
 // /random?count=n&min=a&max=b
 

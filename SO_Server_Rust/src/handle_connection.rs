@@ -1,4 +1,4 @@
-use std::{collections::HashMap, io::{Read, Write}, net::TcpStream, thread::sleep, time::{Duration, Instant}};
+use std::{collections::HashMap, io::{Read, Write}, net::TcpStream, thread::sleep, time::{Duration}};
 
 use crate::{endpoints::{calculate_monte_carlo, create_file, delete_file, fibonacci, generate_random_numbers, rerverse_text, sha256_hash, timestamp_iso}, responses::{http_resonse_400, http_resonse_404, http_response_200, http_response_500}};
 
@@ -14,7 +14,7 @@ pub fn handle_connection(mut stream: TcpStream) {
     }
 
     let request = String::from_utf8_lossy(&buffer[..]);
-    let (method, path) = parse_request(&request);
+    let (_method, path) = parse_request(&request);
 
     let response = route_request(&path);
 

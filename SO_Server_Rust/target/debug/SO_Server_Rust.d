@@ -1,1 +1,1 @@
-/home/drio/Documentos/RUst/Proyecto/SO_Server_Rust/target/debug/SO_Server_Rust: /home/drio/Documentos/RUst/Proyecto/SO_Server_Rust/src/handle_connection.rs /home/drio/Documentos/RUst/Proyecto/SO_Server_Rust/src/main.rs
+/home/drio/Documentos/RUst/Proyecto/SO_Server_Rust/target/debug/SO_Server_Rust: /home/drio/Documentos/RUst/Proyecto/SO_Server_Rust/src/endpoints.rs /home/drio/Documentos/RUst/Proyecto/SO_Server_Rust/src/handle_connection.rs /home/drio/Documentos/RUst/Proyecto/SO_Server_Rust/src/main.rs /home/drio/Documentos/RUst/Proyecto/SO_Server_Rust/src/responses.rs

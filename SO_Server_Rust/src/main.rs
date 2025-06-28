@@ -23,7 +23,7 @@ fn main() {
                 println!("[Worker] Conexión entrante aceptada.");
                 handle_connection(stream);
             }
-            Err(e) => {
+            Err(_e) => {
                 eprintln!("Error al aceptar la conexion.");
             }
         }
